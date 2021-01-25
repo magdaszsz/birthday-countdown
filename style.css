@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.input-transform {
+  height: 300px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background: #F79F1F;
+}
+
+form {
+  position: relative;
+}
+
+input {
+  all: initial;
+  background: #F79F1F;
+  border: 2px solid white;
+  //padding: 1em;
+  cursor: text;
+  border-radius: 1rem;
+  width: 20rem;
+  height: 3rem;
+}
+
+label {
+  position: absolute;   /* if the position is relative, the size of the input changes when the font size changes */
+  left: 1.5em;
+  top: 0em;
+  font-size: 1.4em;
+  transition: all .5s;
+  padding: .4em;
+  color: white;
+}
+
+input:focus {
+  border: 3px solid #FFC312;
+}
+
+input:focus ~ label {   /* label is a sibling element, hence ~ */
+  font-size: 1.1em;
+  background:  #F79F1F;
+  top: -.8em;
+}
