@@ -7,12 +7,47 @@
   <title>Bits and pieces</title>
 </head>
 <body>
-  <section class="input-transform">
+  <!-- <section class="input-transform">
     <form>
       <input type="text" id="name" autocomplete="off">
       <label for="name">Name</label>
     </form>
-  </section>
-  
+  </section> -->
+  <div class="container">
+  <div class="form-container">
+    <h1>Sign up today</h1>
+    <form id="form" novalidate>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Full name" required minlength='3' maxlength='100'>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="name" placeholder="432232234" required pattern="[0-9]{9}">
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="email@gmail.com" required>
+      </div>
+      <div class="form-group">
+        <label for="website">Website</label>
+        <input type="url" id="website" placeholder="https://google.pl" required>
+      </div>
+      <div class="form-group">
+        <label for="password1">Create Password</label>
+        <input type="password" id="password1" placeholder="Create password" required
+          pattern='^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$' title="Proszę pisać wyraźnie">
+        <div class="form-group">
+          <label for="password2">Confirm Password</label>
+          <input type="password" id="password2" placeholder="Confirm password" required>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+    <div class="message-container">
+      <h3 id="message">Don't hesistate</h3>
+    </div>
+  </div>
+  </div>
+<script src="script.js"></script> 
 </body>
 </html>
