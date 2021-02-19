@@ -20,3 +20,22 @@ const submitForm = (e) => {
 }
 
 form.addEventListener('submit', submitForm)
+
+// countdown
+
+const dateElement = document.querySelector(".date");
+const formCountdown = document.querySelector(".countdown__form");
+const today = new Date().toISOString().split("T");
+
+dateElement.setAttribute("min", today[0]);
+
+let countdownDate = "";
+
+function updateCountdown(e) {
+  e.preventDefault();
+  countdownDate = e.srcElement[0].value;
+  console.log(countdownDate)
+}
+
+formCountdown.addEventListener("submit", updateCountdown);
+

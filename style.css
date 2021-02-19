@@ -122,3 +122,27 @@ input:invalid {
   margin-top: 20px;
   text-align: center;
 }
+
+/* countdown */
+
+.countdown__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.countdown__form {
+  width: 30%;
+  border: 2px solid orangered;
+  height: 100px;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.countdown__input {
+  margin: 0 auto;
+  width: 50%;
+}
