@@ -124,18 +124,22 @@ input:invalid {
 }
 
 /* countdown */
+.countdown {
+  height: 100vh;
+}
 
 .countdown__container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  height: 40%;
+  flex-direction: column;
 }
 
 .countdown__form {
   width: 30%;
   border: 2px solid orangered;
-  height: 100px;
+  height: 200px;
   padding: 2em;
   display: flex;
   flex-direction: column;
@@ -145,4 +149,12 @@ input:invalid {
 .countdown__input {
   margin: 0 auto;
   width: 50%;
+}
+
+.countdown__numbers {
+  display: flex;
+  list-style-type: none;
+  border: 2px solid yellow;
+  width: 30%;
+  justify-content: space-around;
 }

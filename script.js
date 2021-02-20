@@ -30,11 +30,19 @@ const today = new Date().toISOString().split("T");
 dateElement.setAttribute("min", today[0]);
 
 let countdownDate = "";
+let countdownValue = Date;
+
+function calculateDifference() {
+  const now = new Date().getTime();
+  const difference = countdownValue - now;
+}
 
 function updateCountdown(e) {
   e.preventDefault();
   countdownDate = e.srcElement[0].value;
   console.log(countdownDate)
+  countdownValue = new Date(countdownDate).getTime();
+  console.log('countdownValue', countdownValue)
 }
 
 formCountdown.addEventListener("submit", updateCountdown);
