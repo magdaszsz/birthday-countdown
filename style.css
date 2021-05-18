@@ -4,157 +4,87 @@
   box-sizing: border-box;
 }
 
-/* .input-transform {
-  height: 300px;
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  background: #F79F1F;
-}
-
-form {
-  position: relative;
-}
-
-input {
-  all: initial;
-  background: #F79F1F;
-  border: 2px solid white;
-  padding: 1em;
-  cursor: text;
-  border-radius: 1rem;
-  width: 20rem;
-  height: 3rem;
-} */
-/* if the position is relative, the size of the input changes when the font size changes */
-/* label {
-  position: absolute;  
-  left: 1.5em;
-  top: .8em;
-  font-size: 1.4em;
-  transition: all .5s;
-  padding: .4em;
-  color: white;
-}
-
-input:focus {
-  border: 3px solid #FFC312;
-} */
-/* label is a sibling element, hence ~ */
-/* input:focus ~ label {   
-  font-size: 1.1em;
-  background:  #F79F1F;
-  top: -.8em;
-} */
-
-/* FORM */
-
-.container  {
-  background: #c9ced3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.form-container {
-  width: min(90% , 480px);
-  height: 630px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 5px 30px grey;
-  font-family: sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 2em;
-}
-
-form {
-  width: 90%;
-  letter-spacing: .1em;
- 
-}
-
-input {
-  box-sizing: border-box;
-  width: 100%;
-  margin: 8px 0;
-  border: 1px solid black;
-  border-radius: 5px;
-  height: 30px;
-  padding-left: .5em;
-}
-
-button {
-  width: 100%;
-  border: none;
-  border-radius: 5px;
-  height: 30px;
-  letter-spacing: .1em;
-  background: black;
-  color: white;
-  cursor: pointer;
-  margin-top: 10px;
- 
-}
-
-button:hover {
-  background: rgb(22, 22, 22);
-}
-
-button:focus {
-  outline: none;
-}
-
-input:valid {
-  border-color: green;
-}
-
-input:invalid {
-  border-color: red;
-}
-
-.message-container {
-  border: 2px solid black;
-  border-radius: 5px;
-  width: 100%;
-  margin-top: 20px;
-  text-align: center;
-}
-
 /* countdown */
 .countdown {
+  display: flex;
+
+  font-family: "Inter", sans-serif;
+  background-image: url(pexels-pixabay-157879.jpg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
   height: 100vh;
+}
+
+.countdown__input {
+  font-family: "Inter", sans-serif;
 }
 
 .countdown__container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 40%;
-  flex-direction: column;
+  height: 50%;
+  width: min(600px, 90%);
+  margin: auto;
+  background: rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .countdown__form {
-  width: 30%;
-  border: 2px solid orangered;
-  height: 200px;
-  padding: 2em;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  width: 100%;
+  padding: 4rem 0;
 }
 
 .countdown__input {
   margin: 0 auto;
-  width: 50%;
+  width: 12rem;
+  display: block;
 }
 
 .countdown__numbers {
   display: flex;
   list-style-type: none;
-  border: 2px solid yellow;
-  width: 30%;
-  justify-content: space-around;
+  //border: 2px solid yellow;
+  width: 100%;
+  justify-content: space-between;
+  font-family: "Dancing Script", cursive;
+  transform: opacity .5s ease;
+}
+
+.countdown__numbers li {
+  height: 6rem;
+  width: 6rem;
+  border-radius: 3px;
+  color: black;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.countdown__numbers span {
+  font-size: 2rem;
+}
+
+.countdown__numbers small {
+  font-size: 1.3rem;
+}
+
+.btn {
+  width: 12rem;
+  border: none;
+  margin: 0 auto;
+}
+
+.attribution {
+  color: white;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  font-size: 1rem;
+}
+
+.attribution a {
+  color: inherit;
 }
