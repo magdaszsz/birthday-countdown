@@ -11,11 +11,12 @@
     />
     <link href="style.css" rel="stylesheet" />
     <title>Birthday countdown</title>
-    <link rel="shortcut icon" type="image/jpg" href="./birthday-cake.png" />
+    <link rel="shortcut icon" type="image/jpg" href="images/birthday-cake.png" />
   </head>
   <body>
     <section class="countdown">
       <div class="countdown__container">
+        <h3>How long until the next big party?</h3>
         <form class="countdown__form">
           <input type="date" class="date countdown__input" />
           <button
@@ -23,16 +24,18 @@
             class="start-btn btn"
             value="Start the clock!"
           >
-            Start the clock!
+            Start the clock
           </button>
         </form>
+        <div class="countdown__numbers-container">
         <ul class="countdown__numbers">
-          <li class="countdown__days"></li>
-          <li class="countdown__hours"></li>
-          <li class="countdown__minutes"></li>
-          <li class="countdown__seconds"></li>
+          <li class="countdown__days"><span class="number"></span><span class="text">days</span></li>
+          <li class="countdown__hours"><span class="number"></span><span class="text">hours</span></li>
+          <li class="countdown__minutes"><span class="number"></span><span class="text">minutes</span></li>
+          <li class="countdown__seconds"><span class="number"></span><span class="text">seconds</span></li>
         </ul>
         <button class="stop-btn btn">Stop the clock</button>
+        </div>
       </div>
       <div class="attribution">
         Icons made by

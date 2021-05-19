@@ -1,9 +1,8 @@
-const daysUi = document.querySelector(".countdown__days");
-const hoursUi = document.querySelector(".countdown__hours");
-const minutesUi = document.querySelector(".countdown__minutes");
-const secondsUi = document.querySelector(".countdown__seconds");
-const numbersDiv = document.querySelector('.countdown__numbers');
-// const startBtn = document.querySelector('.start-btn');
+const daysUi = document.querySelector(".countdown__days > .number");
+const hoursUi = document.querySelector(".countdown__hours > .number");
+const minutesUi = document.querySelector(".countdown__minutes > .number");
+const secondsUi = document.querySelector(".countdown__seconds > .number");
+const numbersDiv = document.querySelector('.countdown__numbers-container');
 const stopBtn = document.querySelector(".stop-btn");
 
 const dateElement = document.querySelector(".date");
@@ -23,10 +22,10 @@ function calculateDifference() {
   const minutes = Math.floor((difference % hour) / minute);
   const seconds = Math.floor((difference % minute) / second);
 
-  daysUi.innerHTML = `${days}<br><span>days</span>`;
-  hoursUi.innerHTML = `${hours}<br><span>hours</span>`;
-  minutesUi.innerHTML = `${minutes}<br><span>minutes</span>`;
-  secondsUi.innerHTML = `${seconds}<br><span>seconds</span>`;
+  daysUi.textContent = `${days}`;
+  hoursUi.textContent = `${hours}`;
+  minutesUi.textContent = `${minutes}`;
+  secondsUi.textContent = `${seconds}`;
 }
 
 let startCountdown;
@@ -42,16 +41,17 @@ function updateCountdown(e) {
   countdownDate = dateElement.value;
   if (countdownDate) {
     countdownValue = new Date(countdownDate).getTime();
-
+    calculateDifference();
     startCountdown = setInterval(calculateDifference, 1000);
-    numbersDiv.style.display = "flex";
+    numbersDiv.style.display = "grid";
+    formCountdown.style.display = "none";
   }
 }
 
 function hideUI() {
 
     numbersDiv.style.display = "none";
- 
+   formCountdown.style.display = "grid";
 }
 
 formCountdown.addEventListener("submit", updateCountdown);
